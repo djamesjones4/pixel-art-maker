@@ -1,14 +1,3 @@
-// create divs
-// for (i = 0; i < 1600; i++) {
-//     document.createElement('div')
-//     div.style.width = '20px';
-//     div.style.height = '20px';
-//     div.style.background - color =
-// }
-
-
-
-
 var body = document.getElementsByTagName('body')[0];
 var boxContainer = document.createElement('div');
 boxContainer.className = "container";
@@ -27,19 +16,26 @@ var palette = document.createElement('div');
 palette.className = "palette";
 body.appendChild(palette);
 
-(function colordivs() {
+var palletteColor = ['blue', 'red', 'orange', 'purple', 'indigo'];
+
+function colordivs() {
     for (var i = 0; i < 5; i++) {
         let div = document.createElement('div');
-        div.id = "abcdefghijklmnop" [i];
+        div.className = 'colors';
+        div.style.backgroundColor = palletteColor[i];
         palette.appendChild(div);
     }
-})();
-palette.addEventListener('click', funtion() {
-    if (event.target.id === "a" || event.target.id === "b" || event.target.id === "c" || event.target.id === "d" || event.target.id === "e") {
-        var selectedColor = event.target.style.backgroundColor
-    }
+};
+colordivs();
+var selectedColor = {
+    color: ''
+}
+palette.addEventListener('click', function() {
+    // console.log(event.target);
+    selectedColor.color = event.target.style.backgroundColor
+
+    console.log(selectedColor);
 })
-console.log(selectedColor);
-// container.addEventListener('click', funciotn() {
-//     event.target.style.backgroundColor = selectedColor;
-// })
+boxContainer.addEventListener('click', function() {
+    event.target.style.backgroundColor = selectedColor['color'];
+})
