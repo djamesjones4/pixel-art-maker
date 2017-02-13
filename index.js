@@ -15,7 +15,7 @@ palette.className = "palette";
 palette.id = 'palette-id'
 body.appendChild(palette);
 
-var palletteColor = ['red', 'orange', 'yellow', 'green', 'indigo', 'violet'];
+var palletteColor = ['red', '#EA882C', 'rgb(38, 140, 162)', '#50d536', 'indigo', '#21e8ee'];
 
 for (var i = 0; i <= 5; i++) {
     let div = document.createElement('div');
