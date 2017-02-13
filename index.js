@@ -1,41 +1,68 @@
 var body = document.getElementsByTagName('body')[0];
 var boxContainer = document.createElement('div');
 boxContainer.className = "container";
+boxContainer.id = "canvas";
 body.appendChild(boxContainer)
 
-function createDivs() {
-    for (let i = 0; i < 1184; i++) {
-        var div = document.createElement('div')
-        boxContainer.appendChild(div)
-        div.className = "pixel"
-    }
+for (let i = 0; i < 621; i++) {
+    var div = document.createElement('div')
+    boxContainer.appendChild(div)
+    div.className = "pixel"
 }
-createDivs();
 
 var palette = document.createElement('div');
 palette.className = "palette";
+palette.id = 'palette-id'
 body.appendChild(palette);
 
-var palletteColor = ['blue', 'red', 'orange', 'purple', 'indigo'];
+var palletteColor = ['red', 'orange', 'yellow', 'green', 'indigo', 'violet'];
 
-function colordivs() {
-    for (var i = 0; i < 5; i++) {
-        let div = document.createElement('div');
-        div.className = 'colors';
-        div.style.backgroundColor = palletteColor[i];
-        palette.appendChild(div);
-    }
-};
-colordivs();
+for (var i = 0; i <= 5; i++) {
+    let div = document.createElement('div');
+    div.className = 'colors ';
+    div.className += palletteColor[i];
+    div.style.backgroundColor = palletteColor[i];
+    palette.appendChild(div);
+}
+
 var selectedColor = {
     color: ''
 }
 palette.addEventListener('click', function() {
-    // console.log(event.target);
-    selectedColor.color = event.target.style.backgroundColor
-
+    if (event.target.id !== 'palette-id') {
+        selectedColor.color = event.target.style.backgroundColor
+    }
     console.log(selectedColor);
 })
-boxContainer.addEventListener('click', function() {
-    event.target.style.backgroundColor = selectedColor['color'];
+var mouseDown = false;
+// var mouseLeave = false;
+boxContainer.addEventListener('mousedown', function() {
+    mouseDown = true;
 })
+boxContainer.addEventListener('mouseup', function() {
+    mouseDown = false;
+})
+boxContainer.addEventListener('mouseover', function() {
+    // mouseLeave = true;
+    if (event.target.id !== "canvas" && mouseDown === true) {
+        event.target.style.backgroundColor = selectedColor['color'];
+    }
+})
+boxContainer.addEventListener('click', function() {
+    if (event.target.id !== 'canvas') {
+        event.target.style.backgroundColor = selectedColor['color'];
+    }
+})
+
+//toggle class on click event so when clicked again the class and color of the pixel will revert to white
+
+
+// boxContainer.addEventListener('mouseleave', function() {
+//     if (event.target.id === 'canvas')
+//         mouseLeave = true;
+// })
+// boxContainer.addEventListener('mousedown', function() {
+//     event.target.style.backgroundColor =
+// })
+
+// })

@@ -1,48 +1,40 @@
-/*body {;
-}
-
-.grid {
-  padding: 15%
-  border: solid black;
-  position: absolute;
-  height: 100px;
-  width: 100px;
-  background-color: red;
-  float: left;
-  display: block;
-}*/
 body {
   padding-top: 5%;
 }
 .pixel {
-  height: 20%px;
-  width: 20%px;
+  height: 1%;
+  width: 1%;
   border: 2px solid black;
   border-collapse: inherit;
   border-radius: 5px 5px 5px 5px;
   padding: 1%;
-  margin: 0%;
+  margin: ;
   float: left;;
-  display: inline-block;
+  display:;
 
 }
 .container{
-  height: 500px;
-  width: 600px;
-  border:
+  height: 33em;
+  width: 40em;
+  border:;
   border-radius: 10px 10px 10px 10px;
-  display: inline-block;
+  display: ;
   position: relative;
-  margin-left: 25%;
-  margin-left: 25%;
-  margin-bottom: 10px;
+  margin: auto;
+  /*margin-left: 25em;
+  margin-left: 25em;
+  margin-bottom: 10px;*/
 }
 .palette {
-  height: 60px;
-  width:500px;
-  display: inline-block;
-  margin-left: 25%;
-  margin-right: 25%;
+  height: 5em;
+  width:17em;
+  display: ;
+  margin: auto;
+  /*margin-left: 25em;
+  margin-right: 25em;
+  margin-top: 30%;*/
+  position: relative;
+  /*float: left;*/
 }
 
 .colors {
