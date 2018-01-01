@@ -4,12 +4,16 @@ header {
   width: 100%;
   display: block;
   background-color: #267AEF;
+  margin-bottom: 1em;
+  border-radius: 10px;
 }
 header h1 {
   text-align: center;
   font-family: sans-serif;
-  color: #ffffff
+  color: #ffffff;
+  padding-top: 2%;
 }
+
 body {
   /*padding-top: 5%;*/
 }
@@ -17,6 +21,7 @@ body img{
   position: absolute;
   background-position: center;
 }
+
 .pixel {
   height: 1%;
   width: 1%;
@@ -41,8 +46,8 @@ body img{
   margin-bottom: 10px;*/
 }
 .palette {
-  height: 5em;
-  width:17em;
+  /*height: 5em;*/
+  width: 20em;
   display: ;
   margin: auto;
   /*margin-left: 25em;
@@ -58,5 +63,6 @@ body img{
   border-radius: 30px 30px 30px;
   display: inline-block;;
   border: 2px solid black;
-  margin: auto;
+  /*margin-left: : 1em;*/
+  margin-right: 1em;
 }
